@@ -33,11 +33,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Infrastructure\\Infrastructure.csproj"
-              },
-              "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\WebApi\\WebApi.csproj": {
-                "projectPath": "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\WebApi\\WebApi.csproj"
+              "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Domain\\Domain.csproj"
               }
             }
           }
@@ -380,11 +377,7 @@
           "net10.0": {
             "framework": "net10.0",
             "targetAlias": "net10.0",
-            "projectReferences": {
-              "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Infrastructure\\Infrastructure.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -403,6 +396,16 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[10.0.12, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -725,7 +728,11 @@
           "net10.0": {
             "framework": "net10.0",
             "targetAlias": "net10.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Domain\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -1069,9 +1076,6 @@
             "projectReferences": {
               "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Application\\Application.csproj": {
                 "projectPath": "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Application\\Application.csproj"
-              },
-              "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Domain\\Domain.csproj"
               },
               "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Infrastructure\\Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\jhont\\Documents\\Arquitectura-Limpia-Sonarqube-Jhon-Garcia\\src\\Infrastructure\\Infrastructure.csproj"

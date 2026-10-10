@@ -1,10 +1,26 @@
-using System;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using Application.UseCases;
 
-// BAD: Mixing minimal APIs with Controllers folder just to confuse structure
 namespace WebApi.Controllers
 {
-    public class OrdersController /* No ControllerBase, no attributes: unused on purpose */ 
+    [ApiController]
+    [Route("api/[controller]")]
+    public class OrdersController : ControllerBase
     {
-        public string DoNothing() => "This controller does nothing. Endpoints are in Program.cs";
+        private readonly CreateOrderUseCase createOrderUseCase;
+
+        public OrdersController(CreateOrderUseCase createOrderUseCase)
+        {
+            this.createOrderUseCase = createOrderUseCase;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateOrder(string customer, string product, int qty, decimal price)
+        {
+            var order = await createOrderUseCase.ExecuteAsync(customer, product, qty, price);
+           
+            return Ok(order);
+        }
     }
 }
